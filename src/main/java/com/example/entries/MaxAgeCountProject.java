@@ -11,12 +11,5 @@ public class MaxAgeCountProject {
     private int projectId;
     private LocalDate age;
 
-    @Override
-    public String toString() {
-        return "MaxAgeCountProject{" +
-                "projectId=" + projectId +
-                ", age=" + age +
-                '}';
-    }
 }
 

@@ -15,7 +15,6 @@ public class DatabasePopulateService {
             for (String query : queries) {
                 statement.executeUpdate(query);
             }
-            System.out.println(DatabaseQueryService.findMaxProjectsClient().get(0));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
