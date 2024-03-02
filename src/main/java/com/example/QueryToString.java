@@ -13,16 +13,16 @@ import java.util.List;
 
 public class QueryToString {
 
-    public static List<String> convert(File file) {
-        List<String> result = new LinkedList<>();
+    public static String convert(File file) {
+        StringBuilder result = new StringBuilder();
         try (Scanner scanner = new Scanner(file, StandardCharsets.UTF_8)) {
             while (scanner.hasNext()) {
                 String query = scanner.useDelimiter(";").next();
-                result.add(query);
+                result.append(query);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return result;
+        return result.toString();
     }
 }
